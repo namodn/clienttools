@@ -25,13 +25,12 @@
 			MonthlyFee => $myrow[3],
 			Notes => $myrow[4],
 		);
-		$data = array(
-			$id => $current,
-		);
+		array_push($data,$current);
 	}
 	
 
-	$client = $data[$id];
+	#$client = $data[$id];
+	#$client = $data[1][1];
 ?>
 
 <html>
@@ -64,34 +63,48 @@
 				Notes
 			</td>
 		</tr>
+<?php
+	foreach ( $data as $client ) {
+		print '
 		<tr>
 			<td>
-				<?php
-					print '
+		';
+		print '
 				<a href="index.php#'. $id . '">' . $id . '</a>
-					';
-				?>
+		';
+		print '
 			</td>
 			<td>
-				<?php
-					print "$client[PaymentDue]";
-				?>
+					<input name"paymentdue" value="
+		';
+				print "$client[PaymentDue]";
+		print '
+					"/>
 			</td>
 			<td>
-				<?php
+					<input name"amountreceived" value="
+		';
 					print "$client[AmountReceived]";
-				?>
+		print '
+					"/>
 			</td>
 			<td>
-				<?php
+					<input name"monthlyfee" value="
+		';
 					print "$client[MonthlyFee]";
-				?>
+		print '
+					"/>
 			</td>
 			<td>
-				<?php
+					<input name"monthlyfee" value="
+		';
 					print "$client[Notes]";
-				?>
+		print '
+					"/>
 			</td>
 		</tr>
+		';
+	}
+?>
 	</table>
 </html>

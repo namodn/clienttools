@@ -100,52 +100,72 @@
 			</td>
 			<td>
 			<?php
-				print "$client[Name]";
+				print '<input name="name" value="';
+				print $client[Name];
+				print '">';
 			?>
 			</td>
 			<td>
 			<?php
+				print '<input name="name" value="';
 				print "$client[Street]";
+				print '">';
 			?>
 			</td>
 			<td>
 			<?php
+				print '<input name="name" value="';
 				print "$client[City]";
+				print '">';
 			?>
 			</td>
 			<td>
 			<?php
+				print '<input name="name" value="';
 				print "$client[State]";
+				print '">';
 			?>
 			</td>
 			<td>
 			<?php
+				print '<input name="name" value="';
 				print "$client[Zip]";
+				print '">';
 			?>
 			</td>
 			<td>
 			<?php
+				print '<input name="name" value="';
 				print "$client[Country]";
+				print '">';
 			?>
 			</td>
 			<td>
 			<?php
+				print '<input name="name" value="';
 				print "$client[Phone]";
+				print '">';
 			?>
 			</td>
 			<td>
 			<?php
+				print '<input name="name" value="';
 				print "$client[FAX]";
+				print '">';
 			?>
 			</td>
 			<td>
 			<?php
+				print '<input name="name" value="';
 				print "$client[EmailAddress]";
+				print '">';
 			?>
 			</td>
 			<td>
 			<?php
+				print '<input name="name" value="';
 				print "$client[Notes]";
+				print '">';
 			?>
 			</td>
 		</tr>

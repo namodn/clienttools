@@ -83,32 +83,63 @@
 			</td>
 			<td>
 				<?php
+					print '<input type="checkbox" name="shell" value="';
 					print "$client[Shell]";
+
+					if ($client[Shell]) {
+						print '" checked>';
+					} else {
+						print '">';
+					}	
 				?>
 			</td>
 			<td>
 				<?php
+					print '<input type="checkbox" name="shell" value="';
 					print "$client[Web]";
+					if ($client[Web]) {
+						print '" checked>';
+					} else {
+						print '">';
+					}	
 				?>
 			</td>
 			<td>
 				<?php
+					print '<input name="shell" value="';
 					print "$client[Domain]";
+					print '">';
 				?>
 			</td>
 			<td>
 				<?php
+					print '<input type="checkbox" name="email" value="';
 					print "$client[Email]";
+
+					if ($client[Email]) {
+						print '" checked>';
+					} else {
+						print '">';
+					}	
 				?>
 			</td>
 			<td>
 				<?php
+					print '<input type="checkbox" name="shell" value="';
 					print "$client[FTP]";
+
+					if ($client[FTP]) {
+						print '" checked>';
+					} else {
+						print '">';
+					}	
 				?>
 			</td>
 			<td>
 				<?php
+					print '<input name="shell" value="';
 					print "$client[Notes]";
+					print '">';
 				?>
 			</td>
 		</tr>
