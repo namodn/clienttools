@@ -28,9 +28,6 @@
 		array_push($data,$current);
 	}
 	
-
-	#$client = $data[$id];
-	#$client = $data[1][1];
 ?>
 
 <html>
@@ -100,7 +97,7 @@
 					"/>
 			</td>
 			<td>
-					<input name="monthlyfee" value="
+					<input name="notes" value="
 		';
 					print "$client[Notes]";
 		print '
