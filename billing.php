@@ -45,6 +45,9 @@
 		</big>
 	</center>
 	<br>
+	<form method="post" action="save.php">
+	<input type="hidden" name="id" value="<?php print $id?>">
+	<input type="hidden" name="table" value="billing">
 	<input type="submit" value="Add entry">
 	<table border="1">
 		<tr>
@@ -76,28 +79,28 @@
 		print '
 			</td>
 			<td>
-					<input name"paymentdue" value="
+					<input name="paymentdue" value="
 		';
 				print "$client[PaymentDue]";
 		print '
 					"/>
 			</td>
 			<td>
-					<input name"amountreceived" value="
+					<input name="amountreceived" value="
 		';
 					print "$client[AmountReceived]";
 		print '
 					"/>
 			</td>
 			<td>
-					<input name"monthlyfee" value="
+					<input name="monthlyfee" value="
 		';
 					print "$client[MonthlyFee]";
 		print '
 					"/>
 			</td>
 			<td>
-					<input name"monthlyfee" value="
+					<input name="monthlyfee" value="
 		';
 					print "$client[Notes]";
 		print '
@@ -108,4 +111,6 @@
 	}
 ?>
 	</table>
+	<input type="submit" name="submit" value="Save Changes">
+	</form>
 </html>

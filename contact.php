@@ -53,7 +53,10 @@
 		</big>
 	</center>
 	<br>
+	<form method="post" action="save.php">
 	<table border="1">
+	<input type="hidden" name="id" value="<?php print $id?>">
+	<input type="hidden" name="table" value="contact">
 		<tr>
 			<td>
 				ID
@@ -107,67 +110,69 @@
 			</td>
 			<td>
 			<?php
-				print '<input name="name" value="';
+				print '<input name="street" value="';
 				print "$client[Street]";
 				print '">';
 			?>
 			</td>
 			<td>
 			<?php
-				print '<input name="name" value="';
+				print '<input name="city" value="';
 				print "$client[City]";
 				print '">';
 			?>
 			</td>
 			<td>
 			<?php
-				print '<input name="name" value="';
+				print '<input name="state" value="';
 				print "$client[State]";
 				print '">';
 			?>
 			</td>
 			<td>
 			<?php
-				print '<input name="name" value="';
+				print '<input name="zip" value="';
 				print "$client[Zip]";
 				print '">';
 			?>
 			</td>
 			<td>
 			<?php
-				print '<input name="name" value="';
+				print '<input name="country" value="';
 				print "$client[Country]";
 				print '">';
 			?>
 			</td>
 			<td>
 			<?php
-				print '<input name="name" value="';
+				print '<input name="phone" value="';
 				print "$client[Phone]";
 				print '">';
 			?>
 			</td>
 			<td>
 			<?php
-				print '<input name="name" value="';
+				print '<input name="fax" value="';
 				print "$client[FAX]";
 				print '">';
 			?>
 			</td>
 			<td>
 			<?php
-				print '<input name="name" value="';
+				print '<input name="emailaddress" value="';
 				print "$client[EmailAddress]";
 				print '">';
 			?>
 			</td>
 			<td>
 			<?php
-				print '<input name="name" value="';
+				print '<input name="notes" value="';
 				print "$client[Notes]";
 				print '">';
 			?>
 			</td>
 		</tr>
 	</table>
+	<input type="submit" name="submit" value="Save changes">
+	</form>
 </html>

@@ -50,6 +50,9 @@
 		</big>
 	</center>
 	<br>
+	<form method="post" action="save.php">
+	<input type="hidden" name="id" value="<?php print $id?>">
+	<input type="hidden" name="table" value="services">
 	<table border="1">
 		<tr border="1">
 			<td>
@@ -83,65 +86,67 @@
 			</td>
 			<td>
 				<?php
-					print '<input type="checkbox" name="shell" value="';
+					print '<input type="checkbox" name="shell"';
 					print "$client[Shell]";
 
 					if ($client[Shell]) {
-						print '" checked>';
+						print ' checked>';
 					} else {
-						print '">';
+						print '>';
 					}	
 				?>
 			</td>
 			<td>
 				<?php
-					print '<input type="checkbox" name="shell" value="';
+					print '<input type="checkbox" name="web"';
 					print "$client[Web]";
 					if ($client[Web]) {
-						print '" checked>';
+						print ' checked>';
 					} else {
-						print '">';
+						print '>';
 					}	
 				?>
 			</td>
 			<td>
 				<?php
-					print '<input name="shell" value="';
+					print '<input name="domain" value="';
 					print "$client[Domain]";
 					print '">';
 				?>
 			</td>
 			<td>
 				<?php
-					print '<input type="checkbox" name="email" value="';
+					print '<input type="checkbox" name="email"';
 					print "$client[Email]";
 
 					if ($client[Email]) {
-						print '" checked>';
+						print ' checked>';
 					} else {
-						print '">';
+						print '>';
 					}	
 				?>
 			</td>
 			<td>
 				<?php
-					print '<input type="checkbox" name="shell" value="';
+					print '<input type="checkbox" name="ftp"';
 					print "$client[FTP]";
 
 					if ($client[FTP]) {
-						print '" checked>';
+						print ' checked>';
 					} else {
-						print '">';
+						print '>';
 					}	
 				?>
 			</td>
 			<td>
 				<?php
-					print '<input name="shell" value="';
+					print '<input name="notes" value="';
 					print "$client[Notes]";
 					print '">';
 				?>
 			</td>
 		</tr>
 	</table>
+	<input type="submit" name="submit" value="Save changes">
+	</form>
 </html>
