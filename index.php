@@ -41,7 +41,7 @@
 		</big>
 	</center>
 	<br>
-	<input type="button" name="add" value="Add user">
+	<a href="add.php">Add user</a>
 	<table border="1">
 <?php
 	foreach( $clients as $client) {
