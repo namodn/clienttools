@@ -15,11 +15,9 @@
 			amountreceived => $_POST['amountreceived'],
 			monthlyfee => $_POST['monthlyfee'],
 			notes => $_POST['notes'],
+			receivedon => $_POST['recievedon'],
 		);
-	
-		include("billing.php");
-		print '<hr>';
-		print "Done with update.";
+		header("Location: billing.php?id=$id");
 	}
 
 	if ($table == 'contact') {
@@ -37,9 +35,7 @@
 			notes => $_POST['notes'],
 		);
 	
-		include("contact.php");
-		print '<hr>';
-		print "Done with update.";
+		header("Location: contact.php?id=$id");
 	}
 
 	if ($table == 'services') {
@@ -69,9 +65,7 @@
 			notes => $_POST['notes'],
 		);
 	
-		include("services.php");
-		print '<hr>';
-		print "Done with update.";
+		header("Location: services.php?id=$id");
 	}
 
 	// do the update

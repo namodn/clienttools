@@ -24,6 +24,7 @@
 			AmountReceived => $myrow[2],
 			MonthlyFee => $myrow[3],
 			Notes => $myrow[4],
+			ReceivedOn=> $myrow[5],
 		);
 		array_push($data,$current);
 	}
@@ -63,6 +64,9 @@
 			<td>
 				Notes
 			</td>
+			<td>
+				ReceivedOn
+			</td>
 		</tr>
 <?php
 	foreach ( $data as $client ) {
@@ -100,6 +104,13 @@
 					<input name="notes" value="
 		';
 					print "$client[Notes]";
+		print '
+					"/>
+			</td>
+			<td>
+					<input name="recievedon" value="
+		';
+					print "$client[ReceivedOn]";
 		print '
 					"/>
 			</td>

@@ -91,6 +91,7 @@
 	<input type="text" name="notes">
 	</td>
 	</tr>
+<!--
 	<tr>
 	<td>
 	Monthly Fee
@@ -99,5 +100,6 @@
 	<input type="text" name="monthlyfee">
 	</td>
 	</tr>
+-->
 	</table>
 </html>
