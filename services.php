@@ -3,8 +3,6 @@
 	include("db_connect.php");
 	include("header.php");
 
-	$id = $_GET['id'];
-
 	// set up query
 	$query = "SELECT * FROM services WHERE id = $id";
 	$result = pg_exec($db,$query);

@@ -37,9 +37,9 @@
 			notes => $_POST['notes'],
 		);
 	
-		print "Done.";
+		include("contact.php");
 		print '<hr>';
-		print '<a href="contact.php?id='.$id.'>back</a>';
+		print "Done with update.";
 	}
 
 	if ($table == 'services') {
@@ -69,9 +69,9 @@
 			notes => $_POST['notes'],
 		);
 	
-		print "Done.";
+		include("services.php");
 		print '<hr>';
-		print '<a href="services.php?id='.$id.'>back</a>';
+		print "Done with update.";
 	}
 
 	// do the update
