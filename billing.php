@@ -20,9 +20,9 @@
 	for ( $row=0; $row < $numrows; $row++) {
 		$myrow = pg_fetch_row($result,$row);
 		$current = array(
-			LastPayment => $myrow[1],
-			MonthlyFee => $myrow[2],
-			NextPayment => $myrow[3],
+			PaymentDue => $myrow[1],
+			AmountReceived => $myrow[2],
+			MonthlyFee => $myrow[3],
 			Notes => $myrow[4],
 		);
 		$data = array(
@@ -52,10 +52,10 @@
 				ID
 			</td>
 			<td>
-				LastPayment
+				PaymentDue
 			</td>
 			<td>
-				NextPayment
+				AmountReceived
 			</td>
 			<td>
 				MonthlyFee
@@ -74,12 +74,12 @@
 			</td>
 			<td>
 				<?php
-					print "$client[LastPayment]";
+					print "$client[PaymentDue]";
 				?>
 			</td>
 			<td>
 				<?php
-					print "$client[NextPayment]";
+					print "$client[AmountReceived]";
 				?>
 			</td>
 			<td>
