@@ -74,6 +74,9 @@
 				</a>
 			</td>
 			<td>
+				<a href="generateBill.php?id=' . $id. '">Generate Bill</a>
+			</td>
+			<td>
 				<input type="button" name="disable"
 				 value="Disable user">
 			</td>

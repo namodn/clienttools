@@ -3,7 +3,7 @@
 	include("header.php");
 
 	// set up query
-	$query = "SELECT * FROM billing WHERE id = $id";
+	$query = "SELECT * FROM billing WHERE cid = $id";
 	$result = pg_exec($db,$query);
 
 	if (!$result) {
@@ -20,6 +20,7 @@
 	for ( $row=0; $row < $numrows; $row++) {
 		$myrow = pg_fetch_row($result,$row);
 		$current = array(
+			ID => $myrow[0],
 			PaymentDue => $myrow[1],
 			AmountReceived => $myrow[2],
 			MonthlyFee => $myrow[3],
@@ -67,6 +68,9 @@
 			<td>
 				ReceivedOn
 			</td>
+			<td>
+				RID
+			</td>
 		</tr>
 <?php
 	foreach ( $data as $client ) {
@@ -111,6 +115,13 @@
 					<input name="recievedon" value="
 		';
 					print "$client[ReceivedOn]";
+		print '
+					"/>
+			</td>
+			<td>
+					<input name="rid" value="
+		';
+					print "$client[ID]";
 		print '
 					"/>
 			</td>
