@@ -17,9 +17,9 @@
 			notes => $_POST['notes'],
 		);
 	
-		print "Done.";
+		include("billing.php");
 		print '<hr>';
-		print '<a href="billing.php?id='.$id.'>back</a>';
+		print "Done with update.";
 	}
 
 	if ($table == 'contact') {

@@ -1,5 +1,7 @@
 <?php
+
 	include("db_connect.php");
+	include("header.php");
 
 	$id = $_GET['id'];
 

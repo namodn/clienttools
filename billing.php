@@ -1,6 +1,6 @@
 <?php
 	include("db_connect.php");
-	$id = $_GET['id'];
+	include("header.php");
 
 	// set up query
 	$query = "SELECT * FROM billing WHERE id = $id";
