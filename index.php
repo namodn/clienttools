@@ -41,6 +41,7 @@
 		</big>
 	</center>
 	<br>
+	<input type="button" name="add" value="Add user">
 	<table border="1">
 <?php
 	foreach( $clients as $client) {
@@ -71,6 +72,10 @@
 				<a href="services.php?id=' . $id . '">
 					services
 				</a>
+			</td>
+			<td>
+				<input type="button" name="disable"
+				 value="Disable user">
 			</td>
 		</tr>
 		';
