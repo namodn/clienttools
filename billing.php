@@ -45,6 +45,7 @@
 		</big>
 	</center>
 	<br>
+	<input type="submit" value="Add entry">
 	<table border="1">
 		<tr>
 			<td>
